@@ -3,6 +3,11 @@ nav li
   display: inline;
 }
 
+header
+{
+  display: flex;
+}
+
 #middle
 {
   border-right: 2px solid black;
@@ -70,7 +75,10 @@ div li.middle
 select
 {
   width: 90%;
+  outline: 2px solid black;
 }
+
+
 /*
 #range
 {
@@ -87,7 +95,8 @@ td
   text-align: center;
   width: 80%;
   margin: 10%;
-  border: 3px solid black;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
 td > input
@@ -104,9 +113,4 @@ input
 {
   display: flex;
   width: 100%;
-}
-
-header
-{
-  display: flex;
 }
