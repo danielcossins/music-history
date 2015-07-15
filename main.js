@@ -24,6 +24,7 @@ for(var i=0; i<songs.length; i++){
 
   var place = songs[i].indexOf("-");
   for(var j=0; j<place; j++){
+    songTitles.push("");
   	songTitles[i]+=songs[i].charAt(j);
   }
   // // //--retrieves title
@@ -39,11 +40,13 @@ for(var i=0; i<songs.length; i++){
 }
 alert(songs);
 
-// var songTitleElements = [];
-// for(var i=0; i<songs.length; i++){
-//   songTitleElements[i] = document.getElementById("song"+i);
-//   songTitleElements[i].innerHTML = songTitles[i];
-// }
+var songTitleElements = [];
+for(var i=0; i<songs.length; i++){
+  var id="song"+(i+1);
+  alert(id);
+  songTitleElements[i] = document.getElementById(id);
+  songTitleElements[i].innerHTML = songTitles[i];
+}
 
-var songTitleElements = document.getElementById("song1");
-songTitleElements.innerHTML = songTitles[0];
+//var songTitleElements = document.getElementById("song1");
+//songTitleElements.innerHTML = songTitles[0];
