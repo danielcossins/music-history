@@ -1,4 +1,3 @@
-
 nav li
 {
   display: inline;
@@ -23,6 +22,7 @@ nav
   background-color: #FFB4B0;
   margin: 5px;
   width: 800px;
+  /*flex-grow: 4;*/
 }
 
 #left
@@ -32,7 +32,10 @@ nav
   width: 150px;
   margin: 5px;
   padding: 10px;
-  float: left;
+  min-width: 150px;
+  /*float: left;*/
+  /*max-width: 150px;*/
+  /*flex-grow: 2;*/
 }
 
 #right
@@ -40,9 +43,28 @@ nav
   border: 2px solid black;
   background-color: #FEFAC0;
   width: 615px;
+  min-width: 200px;
   margin: 5px;
   padding: 0px;
-  float: left;
+  /*display: flex;*/
+  /*float: left;*/
+    /*max-width: 615px;*/
+  /*min-width: 300px;*/
+  /*flex-grow: 2;*/
+  
+  /*flex-grow: 1;*/
+}
+div#right div:nth-child(2n+0)
+{
+  background-color: #F5FFFA;
+}
+div#right div:nth-child(2n+1)
+{
+  background-color: #FFF5EE;
+}
+div#right:first-child
+{
+  font-style: bold;
 }
 
 input
@@ -112,6 +134,10 @@ input
 
 #bottom
 {
+  /*flex-flow: row wrap;*/
   display: flex;
-  width: 100%;
+
+  /*width: 100%;*/
+  /*flex-flow: row wrap;*/
+  /*max-width: 800px;*/
 }
