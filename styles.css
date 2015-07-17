@@ -22,6 +22,7 @@ nav
   background-color: #FFB4B0;
   margin: 5px;
   width: 800px;
+  min-width: 150px;
   /*flex-grow: 4;*/
 }
 
