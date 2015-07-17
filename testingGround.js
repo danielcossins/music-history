@@ -20,7 +20,7 @@ for(var i=0; i<count; i++){
   var albumNumber = "album"+i;
   var genreNumber = "genre"+i;
   divContainer.push("");
-  divContainer[i] = "<div class="+container+/**/">
+  divContainer[i] = "<div class="+container+">
         <p class="+large+" id="+songNumber+">Song Name</p>
           <ul>
             <li id="+artistNumber+">Artist Name</li>
