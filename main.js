@@ -5,39 +5,62 @@
 // songs[songs.length] = "Another Brick in the Wall > by Pink Floyd on the album The Wall";
 // songs[songs.length] = "Welco(me to the Jungle > by Guns & Roses on the album Appetite for Destruction";
 // songs[songs.length] = "Ironi!c > by Alanis Moris*ette on the album Jagged Little Pill";
+
+    var $right = $("#right");
 $(document).ready(function(){
   $.ajax({
     url: "songs.json"
   }).done(function(data){
-    console.log(data);
-    var element = document.getElementById("right");
-    //var right = $('#right').html();
     for(var i=1; i<=data.songs.length; i++){
-      //if(i===1){
-      //$('#right').html("<div class='container'><p class='large' id='song'>"+data.songs[i-1].name+"</p><ul><li id='artist'>"+data.songs[i-1].artist+"</li><li class='middle' id='album'>"+data.songs[i-1].album+"</li><li id='genre"+i+"'>Genre</li></ul></div>");
-      //$( "<div class='container'><p class='large' id='song'>"+data.songs[i-1].name+"</p><ul><li id='artist'>"+data.songs[i-1].artist+"</li><li class='middle' id='album'>"+data.songs[i-1].album+"</li><li id='genre"+i+"'>Genre</li></ul></div><span></span>" ).insertAfter( "<span></span>" );
-      
-      element.innerHTML+="<div class='container'><p class='large' id='song'>"+data.songs[i-1].name+"</p><ul><li id='artist'>"+data.songs[i-1].artist+"</li><li class='middle' id='album'>"+data.songs[i-1].album+"</li><li id='genre"+i+"'>Genre</li></ul></div>";
-
-      //
-      // else{
-      //   $("<div class='container'><p class='large' id='song"+i+"'>Song Name</p><ul><li id='artist"+i+"'>Artist Name</li><li class='middle' id='album"+i+"'>Album Name</li><li id='genre"+i+"'>Genre</li></ul></div>").after("<div class='container'></div>");
-      // }
-      //right+="<div class='container'><p class='large' id='song"+i+"'>Song Name</p><ul><li id='artist"+i+"'>Artist Name</li><li class='middle' id='album"+i+"'>Album Name</li><li id='genre"+i+"'>Genre</li></ul></div>";
-      // $('#song'+i).text(data.songs[i-1].name);
-      // $('#song'+i).text(data.songs[i-1].artist);
-      // $('#song'+i).text(data.songs[i-1].album);
-
-      // $('song'+i).text(data.songs[i-1].name);
-      // console.log(data.songs[i-1].name)
-      // $('artist'+i).text(data.songs[i-1].artist);
-      // console.log(data.songs[i-1].artist)
-      // $('album'+i).text(data.songs[i-1].album);
-      // console.log(data.songs[i-1].album)
+      // $right.append("<div class='container'><p class='large' id='song'>"
+      // +data.songs[i-1].name+"</p><ul><li id='artist'>"
+      // +data.songs[i-1].artist+"</li><li class='middle' id='album'>"
+      // +data.songs[i-1].album+"</li><li id='year'>Year</li></ul></div>");
+      $('#more').before("<div class='container'><p class='large' id='song'>"
+      +data.songs[i-1].name+"</p><ul><li id='artist'>"
+      +data.songs[i-1].artist+"</li><li class='middle' id='album'>"
+      +data.songs[i-1].album+"</li><li id='year'>Year</li></ul></div>");
     }
-    //$('#main').append(JSON.stringify(parsedData));
-  })
+    // $right.append("<button id='more'>More</button>");
+
+
+  });
+
+
+  $("#more").click(function(){
+    $.ajax({
+      url: "songs2.json"
+    }).done(function(data2){
+      for(var i=1; i<=data2.songs.length; i++){
+        // $right.append("<div class='container'><p class='large' id='song'>"
+        // +data2.songs[i-1].name+"</p><ul><li id='artist'>"
+        // +data2.songs[i-1].artist+"</li><li class='middle' id='album'>"
+        // +data2.songs[i-1].album+"</li><li id='year'>Year</li></ul></div>");
+
+        $('#more').before("<div class='container'><p class='large' id='song'>"
+        +data2.songs[i-1].name+"</p><ul><li id='artist'>"
+        +data2.songs[i-1].artist+"</li><li class='middle' id='album'>"
+        +data2.songs[i-1].album+"</li><li id='year'>Year</li></ul></div>");
+      }
+    });
+  });
 });
+
+// $(document).ready(function(){
+//   $.ajax({
+//     url: "songs.json"
+//   }).done(function(data){
+//     console.log(data);
+//     var element = document.getElementById("right");
+//     //var right = $('#right').html();
+//     for(var i=1; i<=data.songs.length; i++){
+//       element.innerHTML+="<div class='container'><p class='large' id='song'>"
+//       +data.songs[i-1].name+"</p><ul><li id='artist'>"
+//       +data.songs[i-1].artist+"</li><li class='middle' id='album'>"
+//       +data.songs[i-1].album+"</li><li id='year'>Year</li></ul></div>";
+//     }
+//   })
+// });
 
 
 // //var newSongs = [];

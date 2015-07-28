@@ -1,0 +1,24 @@
+{
+    "songs": [
+        {
+            "name": "Call Me the Breeze",
+            "artist": "Lynyrd Synyrd",
+            "album": "Second Helping"
+        },
+        {
+            "name": "Pride and Joy",
+            "artist": "Albert King and Stevie Ray Vaughan",
+            "album": "Rough Edges"
+        },
+        {
+            "name": "Piano Man",
+            "artist": "Billy Joel",
+            "album": "Piano Man"
+        },
+        {
+            "name": "Bye Bye Miss American Pie",
+            "artist": "Don McLean",
+            "album": "Starry, Starry Night"
+        }
+    ]
+}
