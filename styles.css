@@ -58,10 +58,12 @@ nav
 div#right div:nth-child(2n+0)
 {
   background-color: #F5FFFA;
+  /*background-color:#7AC5CD;*/
 }
 div#right div:nth-child(2n+1)
 {
   background-color: #FFF5EE;
+  /*background-color: #EE3B3B;*/
 }
 div#right .container:first-child
 {

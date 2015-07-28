@@ -1,29 +1,34 @@
 {
     "songs": [
         {
-            "name": "Legs",
-            "artist": "ZZTop",
-            "album": "Eliminator"
+            "name": "Song of the South",
+            "artist": "Alabama",
+            "album": "Southern Star",
+            "year": 1989
         },
         {
-            "name": "The Logical Song",
-            "artist": "Supertramp",
-            "album": "Breakfast in America"
+            "name": "I'm Gonna Miss Her",
+            "artist": "Brad Paisley",
+            "album": "Part II",
+            "year": 2001
         },
         {
-            "name": "Another Brick in the Wall",
-            "artist": "Pink Floyd",
-            "album": "Wall"
+            "name": "409",
+            "artist": "The Beach Boys",
+            "album": "Surfin' Safari",
+            "year": 1962
         },
         {
-            "name": "Welcome to the Jungle",
-            "artist": "Guns & Roses",
-            "album": "Appetite for Destruction"
+            "name": "Last Chance",
+            "artist": "Shooting Star",
+            "album": "Last Chance",
+            "year": 1979
         },
         {
-            "name": "Ironic",
-            "artist": "Alanis Morisette",
-            "album": "Jagged Little Pill"
+            "name": "Farewell",
+            "artist": "Apocalyptica",
+            "album": "Apocalyptica",
+            "year": 2005
         }
     ]
 }
