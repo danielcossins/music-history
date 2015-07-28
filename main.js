@@ -11,16 +11,17 @@ $(document).ready(function(){
   $.ajax({
     url: "songs.json"
   }).done(function(data){
-    for(var i=1; i<=data.songs.length; i++){
-      // $right.append("<div class='container'><p class='large' id='song'>"
-      // +data.songs[i-1].name+"</p><ul><li id='artist'>"
-      // +data.songs[i-1].artist+"</li><li class='middle' id='album'>"
-      // +data.songs[i-1].album+"</li><li id='year'>Year</li></ul></div>");
-      $('#more').before("<div class='container'><p class='large' id='song'>"
-      +data.songs[i-1].name+"</p><ul><li id='artist'>"
-      +data.songs[i-1].artist+"</li><li class='middle' id='album'>"
-      +data.songs[i-1].album+"</li><li id='year'>Year</li></ul></div>");
-    }
+    addSongs(data);
+    // for(var i=1; i<=data.songs.length; i++){
+    //   // $right.append("<div class='container'><p class='large' id='song'>"
+    //   // +data.songs[i-1].name+"</p><ul><li id='artist'>"
+    //   // +data.songs[i-1].artist+"</li><li class='middle' id='album'>"
+    //   // +data.songs[i-1].album+"</li><li id='year'>Year</li></ul></div>");
+    //   $('#more').before("<div class='container'><p class='large' id='song'>"
+    //   +data.songs[i-1].name+"</p><ul><li id='artist'>"
+    //   +data.songs[i-1].artist+"</li><li class='middle' id='album'>"
+    //   +data.songs[i-1].album+"</li><li id='year'>Year</li></ul></div>");
+    // }
     // $right.append("<button id='more'>More</button>");
 
 
@@ -31,21 +32,31 @@ $(document).ready(function(){
     $.ajax({
       url: "songs2.json"
     }).done(function(data2){
-      for(var i=1; i<=data2.songs.length; i++){
-        // $right.append("<div class='container'><p class='large' id='song'>"
-        // +data2.songs[i-1].name+"</p><ul><li id='artist'>"
-        // +data2.songs[i-1].artist+"</li><li class='middle' id='album'>"
-        // +data2.songs[i-1].album+"</li><li id='year'>Year</li></ul></div>");
+      addSongs(data2);
+      // for(var i=1; i<=data2.songs.length; i++){
+      //   // $right.append("<div class='container'><p class='large' id='song'>"
+      //   // +data2.songs[i-1].name+"</p><ul><li id='artist'>"
+      //   // +data2.songs[i-1].artist+"</li><li class='middle' id='album'>"
+      //   // +data2.songs[i-1].album+"</li><li id='year'>Year</li></ul></div>");
 
-        $('#more').before("<div class='container'><p class='large' id='song'>"
-        +data2.songs[i-1].name+"</p><ul><li id='artist'>"
-        +data2.songs[i-1].artist+"</li><li class='middle' id='album'>"
-        +data2.songs[i-1].album+"</li><li id='year'>Year</li></ul></div>");
-      }
+      //   $('#more').before("<div class='container'><p class='large' id='song'>"
+      //   +data2.songs[i-1].name+"</p><ul><li id='artist'>"
+      //   +data2.songs[i-1].artist+"</li><li class='middle' id='album'>"
+      //   +data2.songs[i-1].album+"</li><li id='year'>Year</li></ul></div>");
+      // }
     });
   });
 });
 
+
+function addSongs(data){
+  for(var i=1; i<=data.songs.length; i++){
+    $('#more').before("<div class='container'><p class='large' id='song'>"
+    +data.songs[i-1].name+"</p><ul><li id='artist'>"
+    +data.songs[i-1].artist+"</li><li class='middle' id='album'>"
+    +data.songs[i-1].album+"</li><li id='year'>Year</li></ul></div>");
+  }
+}
 // $(document).ready(function(){
 //   $.ajax({
 //     url: "songs.json"
