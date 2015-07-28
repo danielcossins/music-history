@@ -6,7 +6,7 @@
 // songs[songs.length] = "Welco(me to the Jungle > by Guns & Roses on the album Appetite for Destruction";
 // songs[songs.length] = "Ironi!c > by Alanis Moris*ette on the album Jagged Little Pill";
 
-var $right = $("#right");
+//var $right = $("#right");
 
 $(document).ready(function(){
   $.ajax({
@@ -32,6 +32,16 @@ function addSongs(data){
     +data.songs[i-1].name+"</p><ul><li id='artist'>"
     +data.songs[i-1].artist+"</li><li class='middle' id='album'>"
     +data.songs[i-1].album+"</li><li id='year'>"
-    +data.songs[i-1].year+"</li></ul></div>");
+    +data.songs[i-1].year+"</li></ul><button class='delete' type='button'>Delete</button></div>");
   }
+  initDelete();
+}
+
+function initDelete(){
+  $('.delete').click(function(){
+    console.log("dfjdkfj");
+    // var id = $(this).attr('id');
+    // console.log(id);
+    $(this).parent().remove();
+  });
 }
