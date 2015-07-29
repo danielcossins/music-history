@@ -39,7 +39,6 @@ function addSongs(data){
 
 function initDelete(){
   $('.delete').click(function(){
-    console.log("dfjdkfj");
     // var id = $(this).attr('id');
     // console.log(id);
     $(this).parent().remove();
